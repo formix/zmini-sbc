@@ -5,7 +5,7 @@ EELAYER END
 $Descr USLedger 17000 11000
 encoding utf-8
 Sheet 1 1
-Title "ZMini SBC For S80"
+Title "RetroZ SBC For S80"
 Date "2018-12-26"
 Rev "1"
 Comp ""
@@ -209,12 +209,12 @@ $EndComp
 $Comp
 L power:PWR_FLAG #FLG01
 U 1 1 5C206B07
-P 10325 1400
-F 0 "#FLG01" H 10325 1475 50  0001 C CNN
-F 1 "PWR_FLAG" V 10325 1528 50  0000 L CNN
-F 2 "" H 10325 1400 50  0001 C CNN
-F 3 "~" H 10325 1400 50  0001 C CNN
-	1    10325 1400
+P 10325 1350
+F 0 "#FLG01" H 10325 1425 50  0001 C CNN
+F 1 "PWR_FLAG" V 10325 1478 50  0000 L CNN
+F 2 "" H 10325 1350 50  0001 C CNN
+F 3 "~" H 10325 1350 50  0001 C CNN
+	1    10325 1350
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -674,12 +674,12 @@ A8
 $Comp
 L 74xx:74HCT04 U2
 U 3 1 5C2076A0
-P 9300 5275
-F 0 "U2" H 9375 5400 50  0000 C CNN
-F 1 "74HCT04" H 9275 5075 50  0000 C CNN
-F 2 "Housings_DIP:DIP-14_W7.62mm" H 9300 5275 50  0001 C CNN
-F 3 "http://www.nxp.com/documents/data_sheet/74HC_HCT04.pdf" H 9300 5275 50  0001 C CNN
-	3    9300 5275
+P 8900 5375
+F 0 "U2" H 8975 5500 50  0000 C CNN
+F 1 "74HCT04" H 8725 5575 50  0000 C CNN
+F 2 "Housings_DIP:DIP-14_W7.62mm" H 8900 5375 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/74HC_HCT04.pdf" H 8900 5375 50  0001 C CNN
+	3    8900 5375
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1291,12 +1291,12 @@ Wire Wire Line
 $Comp
 L power:VCC #PWR021
 U 1 1 5C44B15F
-P 10325 1350
-F 0 "#PWR021" H 10325 1200 50  0001 C CNN
-F 1 "VCC" H 10342 1523 50  0000 C CNN
-F 2 "" H 10325 1350 50  0001 C CNN
-F 3 "" H 10325 1350 50  0001 C CNN
-	1    10325 1350
+P 10325 1275
+F 0 "#PWR021" H 10325 1125 50  0001 C CNN
+F 1 "VCC" H 10342 1448 50  0000 C CNN
+F 2 "" H 10325 1275 50  0001 C CNN
+F 3 "" H 10325 1275 50  0001 C CNN
+	1    10325 1275
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1788,7 +1788,7 @@ U 1 1 5C8D6B58
 P 8275 7775
 F 0 "J2" H 8275 7275 50  0000 C CNN
 F 1 "01x08" H 8275 8175 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x08_Pitch2.54mm" H 8275 7775 50  0001 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x08_Pitch2.54mm" H 8275 7775 50  0001 C CNN
 F 3 "~" H 8275 7775 50  0001 C CNN
 	1    8275 7775
 	-1   0    0    1   
@@ -1799,7 +1799,7 @@ U 1 1 5C8EBAE9
 P 8275 8975
 F 0 "J3" H 8275 8475 50  0000 C CNN
 F 1 "01x08" H 8275 9375 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x08_Pitch2.54mm" H 8275 8975 50  0001 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x08_Pitch2.54mm" H 8275 8975 50  0001 C CNN
 F 3 "~" H 8275 8975 50  0001 C CNN
 	1    8275 8975
 	-1   0    0    1   
@@ -2286,11 +2286,6 @@ Wire Wire Line
 	10875 5675 11000 5675
 Text Notes 9075 9750 0    50   ~ 0
 Parent interrupt selection\nSelecting INT_0 (J1-2) as the parent (SELF)\nmeans that the current IO device is the \nfirst device of the dasy chain.
-Connection ~ 10325 1400
-Wire Wire Line
-	10325 1400 10325 1650
-Wire Wire Line
-	10325 1350 10325 1400
 Wire Wire Line
 	8475 9275 8750 9275
 Wire Wire Line
@@ -2525,17 +2520,6 @@ Wire Wire Line
 Wire Wire Line
 	6500 4725 6275 4725
 Wire Wire Line
-	6275 5275 7600 5275
-Wire Wire Line
-	7600 5275 7600 4825
-Wire Wire Line
-	7600 5275 9000 5275
-Connection ~ 7600 5275
-Wire Wire Line
-	9600 5275 9800 5275
-Wire Wire Line
-	9800 5275 9800 4825
-Wire Wire Line
 	12950 2450 12950 4025
 Wire Wire Line
 	13000 3925 12700 3925
@@ -2548,24 +2532,138 @@ Wire Wire Line
 Text Label 12900 3725 2    50   ~ 0
 ~WAIT
 $Comp
-L power:GND #PWR?
+L power:GND #PWR030
 U 1 1 5C393BAC
 P 8475 8075
-F 0 "#PWR?" H 8475 7825 50  0001 C CNN
+F 0 "#PWR030" H 8475 7825 50  0001 C CNN
 F 1 "GND" H 8480 7902 50  0000 C CNN
 F 2 "" H 8475 8075 50  0001 C CNN
 F 3 "" H 8475 8075 50  0001 C CNN
 	1    8475 8075
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J7
+U 1 1 5C2BA53D
+P 10525 1525
+F 0 "J7" H 10444 1200 50  0000 C CNN
+F 1 "PSW" H 10444 1291 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 10525 1525 50  0001 C CNN
+F 3 "~" H 10525 1525 50  0001 C CNN
+	1    10525 1525
+	1    0    0    1   
+$EndComp
+Connection ~ 10325 1350
 Wire Wire Line
-	7325 8575 7825 8575
+	10325 1350 10325 1425
+Wire Wire Line
+	10325 1525 10325 1650
+Wire Wire Line
+	10325 1275 10325 1350
+Wire Wire Line
+	6275 5275 6800 5275
+Wire Wire Line
+	7600 5375 7600 4825
+Wire Wire Line
+	9800 4825 9800 5475
+$Comp
+L power:VCC #PWR0102
+U 1 1 5C56596E
+P 5925 4825
+F 0 "#PWR0102" H 5925 4675 50  0001 C CNN
+F 1 "VCC" H 5925 4975 50  0000 C CNN
+F 2 "" H 5925 4825 50  0001 C CNN
+F 3 "" H 5925 4825 50  0001 C CNN
+	1    5925 4825
+	1    0    0    -1  
+$EndComp
+Text Label 7600 5275 1    50   ~ 0
+ROM_SEL
+Wire Wire Line
+	7600 5375 8600 5375
+Connection ~ 7600 5375
+Wire Wire Line
+	7400 5375 7600 5375
+Wire Wire Line
+	9200 5575 6800 5575
+$Comp
+L 74xx:74LS32 U1
+U 2 1 5C676510
+P 9500 5475
+F 0 "U1" H 9500 5800 50  0000 C CNN
+F 1 "74LS32" H 9500 5709 50  0000 C CNN
+F 2 "Housings_DIP:DIP-14_W7.62mm" H 9500 5475 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 9500 5475 50  0001 C CNN
+	2    9500 5475
+	1    0    0    -1  
+$EndComp
+Text Label 7325 5575 0    50   ~ 0
+ONB_MEM
+Wire Wire Line
+	6800 5475 6800 5575
+Wire Wire Line
+	6475 5475 6800 5475
+Connection ~ 6800 5475
+Wire Wire Line
+	6800 5325 6800 5475
+Wire Wire Line
+	5925 5325 6800 5325
+Wire Wire Line
+	5925 5125 5925 5325
+Wire Wire Line
+	5875 5475 5875 5675
+$Comp
+L power:GND #PWR0101
+U 1 1 5C43586F
+P 5875 5675
+F 0 "#PWR0101" H 5875 5425 50  0001 C CNN
+F 1 "GND" H 5880 5502 50  0000 C CNN
+F 2 "" H 5875 5675 50  0001 C CNN
+F 3 "" H 5875 5675 50  0001 C CNN
+	1    5875 5675
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_DIP_x01 SW2
+U 1 1 5C435267
+P 6175 5475
+F 0 "SW2" H 5925 5550 50  0000 C CNN
+F 1 "ONBOARD MEM." H 6175 5325 50  0000 C CNN
+F 2 "Buttons_Switches_THT:SW_DIP_x1_W7.62mm_Slide" H 6175 5475 50  0001 C CNN
+F 3 "" H 6175 5475 50  0001 C CNN
+	1    6175 5475
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS32 U1
+U 1 1 5C676385
+P 7100 5375
+F 0 "U1" H 7100 5700 50  0000 C CNN
+F 1 "74LS32" H 7100 5609 50  0000 C CNN
+F 2 "Housings_DIP:DIP-14_W7.62mm" H 7100 5375 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 7100 5375 50  0001 C CNN
+	1    7100 5375
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 5C4F2E56
+P 5925 4975
+F 0 "R12" H 5750 4825 50  0000 L CNN
+F 1 "10K" V 5925 4900 50  0000 L CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5855 4975 50  0001 C CNN
+F 3 "~" H 5925 4975 50  0001 C CNN
+	1    5925 4975
+	-1   0    0    1   
+$EndComp
 Wire Wire Line
 	7325 8175 7975 8175
-Wire Bus Line
-	7925 5925 7925 9550
+Wire Wire Line
+	7325 8575 7825 8575
 Wire Bus Line
 	6300 8375 6300 9550
+Wire Bus Line
+	7925 5925 7925 9550
 Wire Bus Line
 	10550 4325 10550 6500
 Wire Bus Line
@@ -2573,23 +2671,23 @@ Wire Bus Line
 Wire Bus Line
 	6375 8775 6375 9475
 Wire Bus Line
-	8075 6650 8075 9625
-Wire Bus Line
-	6225 7575 6225 9625
-Wire Bus Line
-	5700 5125 5700 5925
+	7925 3725 7925 5925
 Wire Bus Line
 	7775 6500 7775 9475
 Wire Bus Line
-	7925 3725 7925 5925
+	5700 5125 5700 5925
+Wire Bus Line
+	6225 7575 6225 9625
+Wire Bus Line
+	8075 6650 8075 9625
 Wire Bus Line
 	10125 3225 10125 5925
 Wire Bus Line
 	5700 2900 5700 4725
 Wire Bus Line
-	6175 2900 6175 5175
-Wire Bus Line
 	8475 2900 8475 6650
+Wire Bus Line
+	6175 2900 6175 5175
 Wire Bus Line
 	3500 3425 3500 6500
 $EndSCHEMATC
